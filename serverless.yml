@@ -1,0 +1,73 @@
+# NOTE: update this with your service name
+service: amazon-chime-action-test
+
+# Use the serverless-webpack plugin to transpile ES6
+plugins:
+  - serverless-webpack
+  - serverless-dotenv-plugin
+
+# serverless-webpack configuration
+# Enable auto-packing of external modules
+custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: prod
+  timeout: 600
+  region: us-east-1
+  # To load environment variables externally
+  # rename env.example to env.yml and uncomment
+  # the following line. Also, make sure to not
+  # commit your env.yml.
+  #
+  #environment: ${file(env.yml):${self:provider.stage}}
+
+functions:
+  # Defines an HTTP API endpoint that calls the main function in create.js
+  # - path: url path is /notes
+  # - method: POST request
+  # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
+  #     domain api call
+  # - authorizer: authenticate using the AWS IAM role
+  auth:
+    handler: auth.auth
+    timeout: 600
+    environment:
+      LOOKER_AUTHORIZATION: ${env:LOOKER_AUTHORIZATION}
+  action_list:
+    handler: action_list.main
+    timeout: 600
+    events:
+      - http:
+          path: action_list
+          method: post
+          cors: false
+          authorizer: auth
+  markdown_table:
+    handler: markdown_table.main
+    timeout: 600
+    events:
+      - http:
+          path: markdown_table
+          method: post
+          cors: false
+  form:
+    handler: form.main
+    timeout: 600
+    environment:
+      LOOKER_AUTHORIZATION: ${env:LOOKER_AUTHORIZATION}
+    events:
+      - http:
+          path: form
+          method: post
+          cors: false
+
+          
+# Create our resources with separate CloudFormation templates
+resources:
+  # API Gateway Errors
+  - ${file(resources/api-gateway-errors.yml)}

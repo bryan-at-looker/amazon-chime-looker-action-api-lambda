@@ -1,0 +1,33 @@
+{
+  "name": "amazon-chime-action",
+  "version": "1.0.0",
+  "description": "looker query to markdown table in amazon chime",
+  "main": "markdown_table.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.444.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-source-map-support": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.35.3",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "babel-runtime": "^6.26.0",
+    "json-to-markdown": "^1.0.4",
+    "lodash": "^4.17.11",
+    "request": "^2.88.2"
+  }
+}
