@@ -3,29 +3,32 @@ import {find, uniqBy, compact, filter} from 'lodash'
 import {success, failure} from './libs/response-lib'
 import {linkURL} from './helpers'
 
-exports.main = async (event) => {    
-
-  function webhook_post(webhook, data){
+exports.main = async (event) => {   
+  function webhook_post(webhook, data) {
     return new Promise((resolve, reject) => {
-      var request = require('request');
+      
+      const fetch = require('node-fetch');
 
       var options = {
-        url: webhook, 
+        method: 'post',
         body: JSON.stringify({'Content': '/md '+data}),
-        headers: {}
+        headers: { 'Content-Type': 'application/json' },
       }
-
-      request.post(options, function optionalCallback(err, httpResponse, body) {
-        if (err) {
-          console.log(err)
-          reject(err);
-        }
-        resolve(body)
+ 
+      fetch(webhook, options)
+      .then(res => res.json())
+      .then(json => {
+        resolve(json)
       })
-    });
-  }  
+      .catch(err =>{
+        console.error(err);
+        reject(err)
+      })
+    })
+  }
 
   const body = JSON.parse(event.body);
+  console.log(event.body)
 
   var j2md = require('json-to-markdown');
 
@@ -108,28 +111,27 @@ exports.main = async (event) => {
   out = compact(out);
 
   var tableMdString = j2md(out, uniqBy(columns));
-  
-  
-  if (true) {
-    
-    // send title from action hub parameter
+
+  // send title from action hub parameter
+  try {
     if ( body.form_params.send_title == 'yes' ) {
-      var q = await webhook_post(webhook, body.scheduled_plan.title )
+      var q = await webhook_post(webhook, `[${body.scheduled_plan.title}](${body.scheduled_plan.url})` )
     }
     
     // send table
     var r = await webhook_post(webhook, tableMdString);
-
+  
     if (k < data_len) {
       var s = await webhook_post(webhook, 'Showing '+k+'/'+data_len.toLocaleString('en-US')+' rows. [See all rows]('+body.scheduled_plan.url+')');
     }
-    
+  
 
     if (r && r.MessageId && r.RoomId) {
-      return success(r);
+      return success({ looker: {success: true, message: r} })
     } else {
-      return failure(r);
+      return failure({ looker: {success: true, message: r} });
     }
+  } catch (err) {
+    return failure({ looker: {success: true, message: err} });
   }
-  
 }

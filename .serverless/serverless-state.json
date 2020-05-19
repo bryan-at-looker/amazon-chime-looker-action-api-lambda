@@ -9,7 +9,7 @@
       "variableSyntax": "\\${([^{}]+?)}",
       "name": "aws",
       "runtime": "nodejs12.x",
-      "timeout": 600,
+      "timeout": 29,
       "region": "us-east-1",
       "versionFunctions": true,
       "remoteFunctionData": null,
@@ -180,7 +180,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/amazon-chime-action-test/prod/1589840840784-2020-05-18T22:27:20.784Z/amazon-chime-action-test.zip"
+                "S3Key": "serverless/amazon-chime-action-test/prod/1589867376518-2020-05-19T05:49:36.518Z/amazon-chime-action-test.zip"
               },
               "FunctionName": "amazon-chime-action-test-prod-auth",
               "Handler": "auth.auth",
@@ -192,7 +192,7 @@
                 ]
               },
               "Runtime": "nodejs12.x",
-              "Timeout": 600,
+              "Timeout": 29,
               "Environment": {
                 "Variables": {
                   "LOOKER_AUTHORIZATION": "cooldude"
@@ -204,14 +204,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AuthLambdaVersionGSNAhfKFFE8TWskmDmWWgRs6yOoojbxJFjKCVgetlU": {
+          "AuthLambdaVersion7snjYjp5UP10z5wCV1VUaFkd7GKOam3RCuPqiRNA": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AuthLambdaFunction"
               },
-              "CodeSha256": "AG5vH0gbI3odxnW/Cx3H3dihbspKOvnhFFpU13RKivI="
+              "CodeSha256": "Qml07lP9hDxbLuRLyBnh9w3OJX/smCSIgA3RrXjxxwc="
             }
           },
           "ActionUnderscorelistLambdaFunction": {
@@ -221,7 +221,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/amazon-chime-action-test/prod/1589840840784-2020-05-18T22:27:20.784Z/amazon-chime-action-test.zip"
+                "S3Key": "serverless/amazon-chime-action-test/prod/1589867376518-2020-05-19T05:49:36.518Z/amazon-chime-action-test.zip"
               },
               "FunctionName": "amazon-chime-action-test-prod-action_list",
               "Handler": "action_list.main",
@@ -233,7 +233,7 @@
                 ]
               },
               "Runtime": "nodejs12.x",
-              "Timeout": 600,
+              "Timeout": 29,
               "Environment": {
                 "Variables": {
                   "LOOKER_AUTHORIZATION": "cooldude"
@@ -245,14 +245,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "ActionUnderscorelistLambdaVersiond87GK0SSdQj24JhVw4J71vGYqD9Ts5TIqXeagnhFo": {
+          "ActionUnderscorelistLambdaVersionrIsL63fH3tMJKUVrnJtpThGUZ44Rlip3gTcBiURAqMk": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ActionUnderscorelistLambdaFunction"
               },
-              "CodeSha256": "AG5vH0gbI3odxnW/Cx3H3dihbspKOvnhFFpU13RKivI="
+              "CodeSha256": "Qml07lP9hDxbLuRLyBnh9w3OJX/smCSIgA3RrXjxxwc="
             }
           },
           "MarkdownUnderscoretableLambdaFunction": {
@@ -262,7 +262,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/amazon-chime-action-test/prod/1589840840784-2020-05-18T22:27:20.784Z/amazon-chime-action-test.zip"
+                "S3Key": "serverless/amazon-chime-action-test/prod/1589867376518-2020-05-19T05:49:36.518Z/amazon-chime-action-test.zip"
               },
               "FunctionName": "amazon-chime-action-test-prod-markdown_table",
               "Handler": "markdown_table.main",
@@ -274,7 +274,7 @@
                 ]
               },
               "Runtime": "nodejs12.x",
-              "Timeout": 600,
+              "Timeout": 29,
               "Environment": {
                 "Variables": {
                   "LOOKER_AUTHORIZATION": "cooldude"
@@ -286,14 +286,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "MarkdownUnderscoretableLambdaVersion69Ys5MMWGf9Dwz0sGwhvm9Srvcb0JN8l7lLs7Jgze8": {
+          "MarkdownUnderscoretableLambdaVersion7ExErJbNITrvPgwYLKWYczust0CkCrmb0Mc8NVVo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "MarkdownUnderscoretableLambdaFunction"
               },
-              "CodeSha256": "AG5vH0gbI3odxnW/Cx3H3dihbspKOvnhFFpU13RKivI="
+              "CodeSha256": "Qml07lP9hDxbLuRLyBnh9w3OJX/smCSIgA3RrXjxxwc="
             }
           },
           "FormLambdaFunction": {
@@ -303,7 +303,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/amazon-chime-action-test/prod/1589840840784-2020-05-18T22:27:20.784Z/amazon-chime-action-test.zip"
+                "S3Key": "serverless/amazon-chime-action-test/prod/1589867376518-2020-05-19T05:49:36.518Z/amazon-chime-action-test.zip"
               },
               "FunctionName": "amazon-chime-action-test-prod-form",
               "Handler": "form.main",
@@ -315,7 +315,7 @@
                 ]
               },
               "Runtime": "nodejs12.x",
-              "Timeout": 600,
+              "Timeout": 29,
               "Environment": {
                 "Variables": {
                   "LOOKER_AUTHORIZATION": "cooldude"
@@ -327,14 +327,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "FormLambdaVersionffMdRkPK8Vc1J7VLIrSEdLyC2hgvQfmRXDc4piFvKeQ": {
+          "FormLambdaVersion8yjMTSLYt1Z1fUhcKAxvVhJI6x2bCQeggsWUDaCTznQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "FormLambdaFunction"
               },
-              "CodeSha256": "AG5vH0gbI3odxnW/Cx3H3dihbspKOvnhFFpU13RKivI="
+              "CodeSha256": "Qml07lP9hDxbLuRLyBnh9w3OJX/smCSIgA3RrXjxxwc="
             }
           },
           "ApiGatewayRestApi": {
@@ -561,7 +561,7 @@
               "Type": "TOKEN"
             }
           },
-          "ApiGatewayDeployment1589840830164": {
+          "ApiGatewayDeployment1589867366441": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -722,32 +722,6 @@
                 ]
               }
             }
-          },
-          "GatewayResponseDefault4XX": {
-            "Type": "AWS::ApiGateway::GatewayResponse",
-            "Properties": {
-              "ResponseParameters": {
-                "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
-                "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
-              },
-              "ResponseType": "DEFAULT_4XX",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
-          },
-          "GatewayResponseDefault5XX": {
-            "Type": "AWS::ApiGateway::GatewayResponse",
-            "Properties": {
-              "ResponseParameters": {
-                "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
-                "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
-              },
-              "ResponseType": "DEFAULT_5XX",
-              "RestApiId": {
-                "Ref": "ApiGatewayRestApi"
-              }
-            }
           }
         },
         "Outputs": {
@@ -759,25 +733,25 @@
           "AuthLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AuthLambdaVersionGSNAhfKFFE8TWskmDmWWgRs6yOoojbxJFjKCVgetlU"
+              "Ref": "AuthLambdaVersion7snjYjp5UP10z5wCV1VUaFkd7GKOam3RCuPqiRNA"
             }
           },
           "ActionUnderscorelistLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ActionUnderscorelistLambdaVersiond87GK0SSdQj24JhVw4J71vGYqD9Ts5TIqXeagnhFo"
+              "Ref": "ActionUnderscorelistLambdaVersionrIsL63fH3tMJKUVrnJtpThGUZ44Rlip3gTcBiURAqMk"
             }
           },
           "MarkdownUnderscoretableLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "MarkdownUnderscoretableLambdaVersion69Ys5MMWGf9Dwz0sGwhvm9Srvcb0JN8l7lLs7Jgze8"
+              "Ref": "MarkdownUnderscoretableLambdaVersion7ExErJbNITrvPgwYLKWYczust0CkCrmb0Mc8NVVo"
             }
           },
           "FormLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "FormLambdaVersionffMdRkPK8Vc1J7VLIrSEdLyC2hgvQfmRXDc4piFvKeQ"
+              "Ref": "FormLambdaVersion8yjMTSLYt1Z1fUhcKAxvVhJI6x2bCQeggsWUDaCTznQ"
             }
           },
           "ServiceEndpoint": {
@@ -888,7 +862,7 @@
     "functions": {
       "auth": {
         "handler": "auth.auth",
-        "timeout": 600,
+        "timeout": 29,
         "environment": {
           "LOOKER_AUTHORIZATION": "cooldude"
         },
@@ -900,17 +874,16 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "AuthLambdaVersionGSNAhfKFFE8TWskmDmWWgRs6yOoojbxJFjKCVgetlU"
+        "versionLogicalId": "AuthLambdaVersion7snjYjp5UP10z5wCV1VUaFkd7GKOam3RCuPqiRNA"
       },
       "action_list": {
         "handler": "action_list.main",
-        "timeout": 600,
+        "timeout": 29,
         "events": [
           {
             "http": {
               "path": "action_list",
               "method": "post",
-              "cors": false,
               "authorizer": {
                 "name": "auth",
                 "arn": {
@@ -930,17 +903,16 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "ActionUnderscorelistLambdaVersiond87GK0SSdQj24JhVw4J71vGYqD9Ts5TIqXeagnhFo"
+        "versionLogicalId": "ActionUnderscorelistLambdaVersionrIsL63fH3tMJKUVrnJtpThGUZ44Rlip3gTcBiURAqMk"
       },
       "markdown_table": {
         "handler": "markdown_table.main",
-        "timeout": 600,
+        "timeout": 29,
         "events": [
           {
             "http": {
               "path": "markdown_table",
               "method": "post",
-              "cors": false,
               "integration": "AWS_PROXY"
             }
           }
@@ -952,11 +924,11 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "MarkdownUnderscoretableLambdaVersion69Ys5MMWGf9Dwz0sGwhvm9Srvcb0JN8l7lLs7Jgze8"
+        "versionLogicalId": "MarkdownUnderscoretableLambdaVersion7ExErJbNITrvPgwYLKWYczust0CkCrmb0Mc8NVVo"
       },
       "form": {
         "handler": "form.main",
-        "timeout": 600,
+        "timeout": 29,
         "environment": {
           "LOOKER_AUTHORIZATION": "cooldude"
         },
@@ -965,7 +937,6 @@
             "http": {
               "path": "form",
               "method": "post",
-              "cors": false,
               "integration": "AWS_PROXY"
             }
           }
@@ -977,46 +948,15 @@
         "memory": 1024,
         "runtime": "nodejs12.x",
         "vpc": {},
-        "versionLogicalId": "FormLambdaVersionffMdRkPK8Vc1J7VLIrSEdLyC2hgvQfmRXDc4piFvKeQ"
+        "versionLogicalId": "FormLambdaVersion8yjMTSLYt1Z1fUhcKAxvVhJI6x2bCQeggsWUDaCTznQ"
       }
-    },
-    "resources": {
-      "Resources": {
-        "GatewayResponseDefault4XX": {
-          "Type": "AWS::ApiGateway::GatewayResponse",
-          "Properties": {
-            "ResponseParameters": {
-              "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
-              "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
-            },
-            "ResponseType": "DEFAULT_4XX",
-            "RestApiId": {
-              "Ref": "ApiGatewayRestApi"
-            }
-          }
-        },
-        "GatewayResponseDefault5XX": {
-          "Type": "AWS::ApiGateway::GatewayResponse",
-          "Properties": {
-            "ResponseParameters": {
-              "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
-              "gatewayresponse.header.Access-Control-Allow-Headers": "'*'"
-            },
-            "ResponseType": "DEFAULT_5XX",
-            "RestApiId": {
-              "Ref": "ApiGatewayRestApi"
-            }
-          }
-        }
-      },
-      "Outputs": {}
     },
     "serviceFilename": "serverless.yml",
     "layers": {},
     "isDashboardMonitoringPreconfigured": false
   },
   "package": {
-    "artifactDirectoryName": "serverless/amazon-chime-action-test/prod/1589840840784-2020-05-18T22:27:20.784Z",
+    "artifactDirectoryName": "serverless/amazon-chime-action-test/prod/1589867376518-2020-05-19T05:49:36.518Z",
     "artifact": ""
   }
 }
